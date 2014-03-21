@@ -12,6 +12,7 @@ namespace BoidBox
 		mLayout  = new QHBoxLayout();
 		mLayout->addWidget(mDisplay, 1);
 		mLayout->addWidget(mControl, 0);
+		mLayout->setContentsMargins(0, 0, 0, 0);
 		setLayout(mLayout);
 	}
 	

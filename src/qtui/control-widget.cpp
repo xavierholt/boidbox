@@ -26,14 +26,14 @@ namespace BoidBox
 	{
 		mBox = box;
 		mLayout = new QFormLayout();
-		mLayout->addRow("Alignment Wt.",  new Single(&mBox->mAlignmentWeight,  0, 2, 0.01));
-		mLayout->addRow("Alignment F.",   new Single(&mBox->mAlignmentFalloff, 0, 50));
-		mLayout->addRow("Cohesion Wt.",   new Single(&mBox->mCohesionWeight,   0, 2, 0.01));
-		mLayout->addRow("Cohesion F.",    new Single(&mBox->mCohesionFalloff,  0, 50));
-		mLayout->addRow("Avoidance Wt.",  new Single(&mBox->mAvoidanceWeight,  0, 2, 0.01));
-		mLayout->addRow("Avoidance F.",   new Single(&mBox->mAvoidanceFalloff, 0, 50));
-		mLayout->addRow("Minimum Speed",  new Single(&mBox->mMinimumSpeed,     0, 0.02, 0.001));
-		mLayout->addRow("Variable Speed", new Single(&mBox->mVariableSpeed,    0, 0.02, 0.001));
+		mLayout->addRow("Alignment Weight",  new Single(&mBox->mAlignmentWeight,  0, 2, 0.01));
+		mLayout->addRow("Alignment Falloff", new Single(&mBox->mAlignmentFalloff, 0, 50));
+		mLayout->addRow("Cohesion Weight",   new Single(&mBox->mCohesionWeight,   0, 2, 0.01));
+		mLayout->addRow("Cohesion Falloff",  new Single(&mBox->mCohesionFalloff,  0, 50));
+		mLayout->addRow("Avoidance Weight",  new Single(&mBox->mAvoidanceWeight,  0, 2, 0.01));
+		mLayout->addRow("Avoidance Falloff", new Single(&mBox->mAvoidanceFalloff, 0, 50));
+		mLayout->addRow("Minimum Speed",     new Single(&mBox->mMinimumSpeed,     0, 0.02, 0.001));
+		mLayout->addRow("Variable Speed",    new Single(&mBox->mVariableSpeed,    0, 0.02, 0.001));
 		//mLayout->addStretch();
 		setLayout(mLayout);
 	}
