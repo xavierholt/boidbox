@@ -35,19 +35,52 @@ namespace BoidBox
 			glTranslatef(position.x(), position.y(), position.z());
 			glRotatef(+azm * 180/M_PI, 0, 1, 0);
 			glRotatef(-alt * 180/M_PI, 1, 0, 0);
-			glBegin(GL_TRIANGLES);
+			
+			glBegin(GL_QUADS);
 			{
 				glColor3f(0.6, 0.6, 0.6);
 				glNormal3f(0, 1, 0);
-				glVertex3f(-0.02, 0, -0.02);
-				glVertex3f(+0.02, 0, -0.02);
-				glVertex3f( 0.00, 0, +0.02);
+				
+				// Left Wing
+				glVertex3f(-0.005,  0.000,  0.000);
+				glVertex3f(-0.001,  0.000,  0.000);
+				glVertex3f(-0.001,  0.000, +0.009);
+				glVertex3f(-0.005,  0.000, +0.003);
+				
+				// Right Wing
+				glVertex3f(+0.005,  0.000,  0.000);
+				glVertex3f(+0.001,  0.000,  0.000);
+				glVertex3f(+0.001,  0.000, +0.009);
+				glVertex3f(+0.005,  0.000, +0.003);
 				
 				glColor3f(speed, 0, 1 - speed);
-				glNormal3f(1, 0, 0);
-				glVertex3f(0,  0.00,  0.00);
-				glVertex3f(0,  0.00, -0.02);
-				glVertex3f(0, +0.01, -0.02);
+				glNormal3f(1.0/sqrt(2), 1.0/sqrt(2), 0);
+				
+				// Left Wingtip
+				glVertex3f(+0.006, +0.001,  0.000);
+				glVertex3f(+0.005,  0.000,  0.000);
+				glVertex3f(+0.005,  0.000, +0.003);
+				glVertex3f(+0.006, +0.001, +0.001);
+				
+				// Left Fuselage
+				glVertex3f(+0.001, -0.000,  0.000);
+				glVertex3f( 0.000, -0.001,  0.000);
+				glVertex3f( 0.000, -0.001, +0.011);
+				glVertex3f(+0.001, -0.000, +0.009);
+				
+				glNormal3f(-1.0/sqrt(2), 1.0/sqrt(2), 0);
+				
+				// Right Wingtip
+				glVertex3f(-0.006, +0.001,  0.000);
+				glVertex3f(-0.005,  0.000,  0.000);
+				glVertex3f(-0.005,  0.000, +0.003);
+				glVertex3f(-0.006, +0.001, +0.001);
+				
+				// Right Fuselage
+				glVertex3f(-0.001,  0.000,  0.000);
+				glVertex3f( 0.000, -0.001,  0.000);
+				glVertex3f( 0.000, -0.001, +0.011);
+				glVertex3f(-0.001,  0.000, +0.009);
 			}
 			glEnd();
 		}

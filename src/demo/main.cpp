@@ -6,7 +6,7 @@
 int main(int argc, char* argv[])
 {
 	QApplication app(argc, argv);
-	BoidBox::Box box(300);
+	BoidBox::Box box(400);
 	BoidBox::DemoWidget widget(&box);
 	widget.showMaximized();
 	widget.animate();

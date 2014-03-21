@@ -14,4 +14,4 @@ boidbox :\
 src/moc_%.cpp : src/%.h
 	moc -o $@ $+
 clean :
-	rm -rf boidbox src/*.o
+	rm -rf boidbox src/core/*.o src/qtui/*.o src/demo/*.o
