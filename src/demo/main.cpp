@@ -1,5 +1,5 @@
-#include "box.h"
-#include "demo-widget.h"
+#include "../core/box.h"
+#include "../qtui/demo-widget.h"
 
 #include <QtWidgets/QApplication>
 

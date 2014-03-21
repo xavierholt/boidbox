@@ -1,6 +1,6 @@
 #include "display-widget.h"
 
-#include "box.h"
+#include "../core/box.h"
 
 #include <QtGui/QMouseEvent>
 #include <QtGui/QWheelEvent>

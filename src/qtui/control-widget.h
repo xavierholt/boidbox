@@ -1,7 +1,6 @@
 #ifndef BOIDBOX_CONTROL_WIDGET_H
 #define BOIDBOX_CONTROL_WIDGET_H
 
-#include "box.h"
 #include "qtfloat.h"
 
 #include <QtWidgets/QDoubleSpinBox>
@@ -10,6 +9,8 @@
 
 namespace BoidBox
 {
+	class Box;
+	
 	class ControlWidget : public QWidget
 	{
 		class Single : public QDoubleSpinBox

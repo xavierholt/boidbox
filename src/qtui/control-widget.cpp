@@ -1,5 +1,7 @@
 #include "control-widget.h"
 
+#include "../core/box.h"
+
 namespace BoidBox
 {
 	ControlWidget::Single::Single(float* value, float min, float max, float step): QDoubleSpinBox()
